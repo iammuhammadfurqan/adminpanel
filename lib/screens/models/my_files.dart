@@ -25,18 +25,18 @@ List demoMyFiles = [
     title: "Active Orders",
     numOfFiles: 1330,
     svgSrc: "assets/images/active_orders.svg",
-    color: Color(0xFFFFA113),
+    color: const Color(0xFFFFA113),
   ),
   CloudStorageInfo(
     title: "Active Requests",
     numOfFiles: 1328,
     svgSrc: "assets/images/active_requests.svg",
-    color: Color(0xFFA4CDFF),
+    color: const Color(0xFFA4CDFF),
   ),
   CloudStorageInfo(
     title: "Completed Orders",
     numOfFiles: 541,
     svgSrc: "assets/images/completed_orders.svg",
-    color: Color(0xFF007EE5),
+    color: const Color(0xFF007EE5),
   ),
 ];

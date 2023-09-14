@@ -22,20 +22,21 @@ class RealData extends StatelessWidget {
                   children: [
                     Text(
                       'Users Data',
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: defaultPadding,
                 ),
                 GridView.builder(
                   shrinkWrap: true,
                   itemCount: demoMyFiles.length,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 4, crossAxisSpacing: defaultPadding),
                   itemBuilder: (context, index) => RealDataInfo(
                     info: demoMyFiles[index],
+                    index: index,
                   ),
                 ),
               ],

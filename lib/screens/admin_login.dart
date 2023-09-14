@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'main_screens.dart';
-import 'package:admin_panel/responsive.dart';
 
 class AdminLoginPage extends StatefulWidget {
   @override
@@ -17,7 +16,7 @@ class _AdminLoginPageState extends State<AdminLoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Admin Login'),
+        title: const Text('Admin Login'),
         automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
@@ -74,14 +73,13 @@ class _AdminLoginPageState extends State<AdminLoginPage> {
                     cursor: SystemMouseCursors.click,
                     child: ElevatedButton(
                       onPressed: () {
-                        if (_formKey.currentState!.validate()) {
+                        // if (_formKey.currentState!.validate()) {
 // Validate admin credentials and navigate to admin dashboard
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => MainScreen()),
-                          );
-                        }
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MainScreen()),
+                        );
+                        //  }
                       },
                       child: Text(
                         'Login',
