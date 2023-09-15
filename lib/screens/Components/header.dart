@@ -18,9 +18,9 @@ class Header extends StatelessWidget {
           'Dashboard',
           style: Theme.of(context).textTheme.headline6,
         ),
-        Spacer(),
-        Expanded(child: SearchField()),
-        ProfileCard()
+        const Spacer(),
+        // Expanded(child: SearchField()),
+        const ProfileCard()
       ],
     );
   }
@@ -35,11 +35,11 @@ class ProfileCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             color: secondaryColor,
             borderRadius: BorderRadius.all(Radius.circular(10))),
-        margin: EdgeInsets.only(left: defaultPadding),
-        padding: EdgeInsets.symmetric(
+        margin: const EdgeInsets.only(left: defaultPadding),
+        padding: const EdgeInsets.symmetric(
           horizontal: defaultPadding,
           vertical: defaultPadding / 2,
         ),
@@ -54,7 +54,7 @@ class ProfileCard extends StatelessWidget {
                 horizontal: defaultPadding / 2,
               ),
               child: Text(
-                'Umar Hayyat',
+                'Admin',
               ),
             ),
             InkWell(
@@ -63,9 +63,9 @@ class ProfileCard extends StatelessWidget {
                   context: context,
                   builder: (BuildContext context) {
                     return AlertDialog(
-                      title: Text('Are you sure you want to logout?'),
+                      title: const Text('Are you sure you want to logout?'),
                       content: ListTile(
-                        title: Text(
+                        title: const Text(
                           'Logout',
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.red),
@@ -84,7 +84,7 @@ class ProfileCard extends StatelessWidget {
                             onPressed: () {
                               Navigator.of(context).pop();
                             },
-                            child: Text(
+                            child: const Text(
                               'Cancel',
                             ),
                           ),
@@ -94,7 +94,7 @@ class ProfileCard extends StatelessWidget {
                   },
                 );
               },
-              child: Icon(Icons.keyboard_arrow_down),
+              child: const Icon(Icons.keyboard_arrow_down),
             )
           ],
         ),
@@ -116,18 +116,19 @@ class SearchField extends StatelessWidget {
           hintText: 'Search User',
           fillColor: secondaryColor,
           filled: true,
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderSide: BorderSide.none,
-            borderRadius: const BorderRadius.all(Radius.circular(10)),
+            borderRadius: BorderRadius.all(Radius.circular(10)),
           ),
           suffixIcon: InkWell(
             onTap: () {},
             child: Container(
               height: 40,
               width: 40,
-              padding: EdgeInsets.all(10),
-              margin: EdgeInsets.symmetric(horizontal: defaultPadding / 8),
-              decoration: BoxDecoration(
+              padding: const EdgeInsets.all(10),
+              margin:
+                  const EdgeInsets.symmetric(horizontal: defaultPadding / 8),
+              decoration: const BoxDecoration(
                   color: primaryColor,
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               child: SvgPicture.asset("assets/images/search.svg"),

@@ -73,12 +73,24 @@ class _AdminLoginPageState extends State<AdminLoginPage> {
                     cursor: SystemMouseCursors.click,
                     child: ElevatedButton(
                       onPressed: () {
-                        // if (_formKey.currentState!.validate()) {
-// Validate admin credentials and navigate to admin dashboard
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => MainScreen()),
-                        );
+                        final email = "admin@foodbank.com";
+                        final password = "admin123";
+
+                        if (_emailController.text == email &&
+                            _passwordController.text == password) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MainScreen()),
+                          );
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text('Invalid email or password'),
+                            ),
+                          );
+                        }
+
                         //  }
                       },
                       child: Text(

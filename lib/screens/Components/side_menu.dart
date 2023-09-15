@@ -43,16 +43,16 @@ class SideMenu extends StatelessWidget {
                 );
               },
             ),
-            DrawerListTile(
-              title: 'Update Profile',
-              icon: Icons.person,
-              press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => AdminProfile()),
-                );
-              },
-            ),
+            // DrawerListTile(
+            //   title: 'Update Profile',
+            //   icon: Icons.person,
+            //   press: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(builder: (context) => AdminProfile()),
+            //     );
+            //   },
+            // ),
             //DrawerListTile(
             //title: 'Panel Settings',
             //icon: Icons.settings,
